@@ -126,7 +126,7 @@ LegalEase is a web-based application designed to process legal documents, extrac
 4.  **View Results:** The results will be displayed on the `result.html` page.
 
 ## Folder Structure
-
+***
 your_project/
 ├── app.py # Main Flask application file
 ├── requirements.txt # Python dependencies
@@ -136,6 +136,7 @@ your_project/
 │ └── result.html # Page for displaying analysis results
 ├── uploads/ # Folder where uploaded files are stored
 └── venv/ # Virtual environment (created when setup)
+**
 
 ## Contributing
 

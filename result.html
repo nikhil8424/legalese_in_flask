@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Analysis Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #F9F0EE;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: start;
+            min-height: 100vh;
+        }
+        .container {
+            display: flex;
+            width: 90%; /* Adjust as needed */
+            max-width: 1200px;
+            border: 1px solid #ddd;
+        }
+         .left-pane {
+            background-color: #ffe9e3;
+            width: 300px;
+            padding: 20px;
+            border-right: 1px solid #ddd;
+        }
+        .right-pane {
+            background-color: #ffe9e3;
+            flex: 1;
+            padding: 20px;
+        }
+        .right-pane h2 {
+            text-align: center;
+            margin-bottom: 20px;
+             color:#A86254;
+        }
+          .result-box {
+             margin-top: 20px;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border: 1px solid #ddd;
+             height: 400px;
+            overflow-y: auto;
+        }
+        .welcome-text-section {
+            padding: 20px;
+            color: #333;
+            line-height: 1.6;
+             overflow-y: auto;
+             height: 600px;
+        }
+        .welcome-text-section h1{
+            font-size: 1.5em;
+            font-weight: bold;
+             margin-bottom: 10px;
+        }
+       .welcome-text-section p {
+             margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+         <div class="left-pane">
+           <div class="welcome-text-section">
+            <h1>Hey there!</h1>
+            <p>We know it's not perfect yet, and we sincerely apologize for any inconvenience caused by the current performance.</p>
+            <p>But here’s the exciting part—this is just the beginning!</p>
+            <p>In future versions, we’re planning to integrate cutting-edge AI and Machine Learning technologies to enhance accuracy, speed, and intelligence.</p>
+            <p>A revamped, intuitive user interface is on the way to ensure a seamless user experience.</p>
+            <p>We’ll also add more powerful features and improve the current functionalities based on your valuable feedback.</p>
+            <p>How does it work now? Simple: Upload -> Process -> Select Function -> Get Results!</p>
+             <p>Thank you for your patience and support as we work toward making LegalEase your ultimate legal assistant.</p>
+            <p>Let’s take the first step together. Your hassle-free legal journey starts here!</p>
+             </div>
+         </div>
+        <div class="right-pane">
+            <h2>Analysis Result</h2>
+            <div class="result-box">
+                <p>{{ analysis_result }}</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

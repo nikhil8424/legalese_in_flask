@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LegalEase Application</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #F9F0EE;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: start;
+            min-height: 100vh;
+        }
+        .container {
+            display: flex;
+            width: 90%; /* Adjust as needed */
+            max-width: 1200px;
+            border: 1px solid #ddd;
+        }
+        .left-pane {
+            background-color: #ffe9e3;
+            width: 300px;
+            padding: 20px;
+            border-right: 1px solid #ddd;
+        }
+        .right-pane {
+           background-color: #ffe9e3;
+            flex: 1;
+            padding: 20px;
+        }
+        .right-pane h2 {
+             text-align: center;
+             margin-bottom: 20px;
+            color:#A86254;
+        }
+        .right-pane form, .upload-box{
+            margin-top: 20px;
+        }
+        .right-pane label{
+           display: block;
+           margin-bottom: 5px;
+           font-weight: bold;
+           color:#A86254;
+        }
+         .right-pane select, .right-pane input[type="file"] {
+            width: 98%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            background-color: #fff;
+        }
+        .upload-btn{
+            background-color: #c7b198;
+            color: black;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .upload-btn:hover {
+            background-color: #b59d84;
+         }
+          /* Styles for the welcome text section */
+        .welcome-text-section {
+            padding: 20px;
+            color: #333;
+            line-height: 1.6;
+             overflow-y: auto;
+             height: 600px;
+         }
+        .welcome-text-section h1{
+            font-size: 1.5em;
+             font-weight: bold;
+             margin-bottom: 10px;
+        }
+        .welcome-text-section p {
+             margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-pane">
+           <div class="welcome-text-section">
+            <h1>Hey there!</h1>
+            <p>We know it's not perfect yet, and we sincerely apologize for any inconvenience caused by the current performance.</p>
+            <p>But here’s the exciting part—this is just the beginning!</p>
+            <p>In future versions, we’re planning to integrate cutting-edge AI and Machine Learning technologies to enhance accuracy, speed, and intelligence.</p>
+            <p>A revamped, intuitive user interface is on the way to ensure a seamless user experience.</p>
+            <p>We’ll also add more powerful features and improve the current functionalities based on your valuable feedback.</p>
+            <p>How does it work now? Simple: Upload -> Process -> Select Function -> Get Results!</p>
+             <p>Thank you for your patience and support as we work toward making LegalEase your ultimate legal assistant.</p>
+            <p>Let’s take the first step together. Your hassle-free legal journey starts here!</p>
+             </div>
+        </div>
+        <div class="right-pane">
+           <h2>LegalEase Application</h2>
+             <form method="post" enctype="multipart/form-data">
+                <label for="language">Select Language:</label>
+                    <select name="language" id="language">
+                       <option value="English" {% if selected_language == "English" %}selected{% endif %}>English</option>
+                       <option value="Marathi" {% if selected_language == "Marathi" %}selected{% endif %}>Marathi</option>
+                       <option value="Hindi" {% if selected_language == "Hindi" %}selected{% endif %}>Hindi</option>
+                       <option value="Tamil" {% if selected_language == "Tamil" %}selected{% endif %}>Tamil</option>
+                    </select>
+               <label for="file">Upload your File here (png, jpg, pdf):</label>
+                    <input type="file" name="file" id="file" required>
+                   <button class="upload-btn" type="submit">Upload</button>
+             </form>
+         </div>
+    </div>
+</body>
+</html>
